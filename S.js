@@ -36,19 +36,49 @@
 // console.log(new UserInfoTwo('Лена', 27));
 
 
-//  Функция, которая принимает массив объектов с полями name и money, возвращает числом общее количество денег //
-// Как вывести и имена??? //
-// const USER_INFO = (name, money) => {
+// Функция, которая принимает массив объектов с полями name и money, возвращает числом общее количество денег //
+
+// const userInfo = (name, money) => {
 //     return {name:name, money:money};
 // }
-// const HUM_1 = USER_INFO('Вася', 200);
-// const HUM_2 = USER_INFO('Дима', 150);
+// const hum1 = userInfo('Вася', 200);
+// const hum2 = userInfo('Дима', 150);
+// const hum3 = userInfo('Игорь', 500);
+// const hums = [hum1, hum2, hum3];
 //
-// const PLUS_MONEY = (obj1, obj2) => {
-//     // return obj1.name, obj2.name;
-//     return obj1.money + obj2.money;
+// const plusMoney = (ar) => {
+//     const names = [];
+//     let money = 0;
+//    for (i = 0; i < ar.length; i++) {
+//        names.push(ar[i].name);
+//        money = money + ar[i].money;
+//    }
+//    return [names, money];
 // }
-// console.log(PLUS_MONEY(HUM_1, HUM_2));
+// console.log(plusMoney(hums));
+
+
+const userInfo = (name, money, age) => {
+    return {name: name, money: money, age: age};
+}
+const hum1 = userInfo('Вася', 200, 19);
+const hum2 = userInfo('Дима', 150, 17);
+const hum3 = userInfo('Игорь', 500, 22);
+const hums = [hum1, hum2, hum3];
+
+const plusMoney = (ar) => {
+    const names = [];
+    let money = 0;
+    for (i = 0; i < ar.length; i++) {
+        if (ar[i].age > 18) {
+            names.push(ar[i].name);
+            money = money + ar[i].money;
+        }
+    }
+    return [names, money];
+}
+console.log(plusMoney(hums));
+
 
 
 
@@ -70,86 +100,37 @@
 
 
 
-const HUM_1 = {name:'Иван', money:100, age:19};
-const HUM_2 = {name:'Дмитрий', money:120, age:17};
-const HUM_3 = {name:'Егор', money:210, age:21};
-
-const HUMANS = [HUM_1, HUM_2, HUM_3];
-
-const ARRAY_OF_AGE_SUM = (ar) => {
-
-}
-
-console.log(HUM_1.age);
-
-
+// const HUM_1 = {name:'Иван', money:100, age:19};
+// const HUM_2 = {name:'Дмитрий', money:120, age:17};
+// const HUM_3 = {name:'Егор', money:210, age:21};
+//
+// const HUMANS = [HUM_1, HUM_2, HUM_3];
+//
+// const ARRAY_OF_AGE_SUM = (ar) => {
+//
+// }
+//
+// console.log(HUM_1.age);
 
 
-// Повторение //
-
-// Функция, которая считает сколько в массиве массивов с количеством элементов больше 2, с помощью reduce //
-const c = [[1, 2], [3, 4, 5], [4, 6, 9], [1, 4]];
-
-const SUM = c.reduce((prev, item) => {
-    if (item.length > 2) {
-        return prev + 1;
-    }
-    return prev;
-}, 0);
-console.log(SUM);
-
-
-// Вернуть массив из true false из массива чисел, больше число 0 или нет //
-const AR_ONE = [1, 3, -2, 2, -5];
-
-const AR_ONE_ONE = AR_ONE.reduce((prev, item) => {
-    if (item > 0) {
-        prev.push(true);
-    } else {
-        prev.push(false);
-    }
-    return prev;
-}, []);
-console.log(AR_ONE_ONE);
-
-
-// Считает количество чисел > 0 в массиве //
-const ARR_TWO = [1, 3, -3, -6, 9, -3];
-
-const ARR_TWO_TWO = ARR_TWO.reduce((prev, item) => {
-    if (item > 0) {
-        return prev + 1;
-    }
-    return prev;
-}, 0);
-console.log(ARR_TWO_TWO);
-
-
-// Массив строк, чтобы reducom слить в одну //
-const q2 = ['Привет', ', ', 'Даниил'].reduce((prev, item) => {
-    return prev + item;
-}, '');
-console.log(q2);
-
-
-// В массиве строк посчитать общую длину строк длиннее 3 //
-const x11 = ['Молоко', 'Лампа', 'Малина', 'Сыр'].reduce((prev, item) => {
-    if (item.length > 3) {
-        return prev + item.length;
-    }
-    return prev;
-}, 0);
-console.log(x11);
 
 
 // Вычислить строку //
-// const STR = '5 + 10 - 7';
+// const STR = '5+10-7';
 //
 // const ARR_1 = STR.split(',');
 // console.log(ARR_1);
 //
-// const ARR_2 = ARR_1.reduce((prev, item) => {
-//
-// }, 0);
+// const ARR_2 = ARR_1.reduce((prev, item, index, array) => {
+//     if(Number.isInteger(parseInt(item))) {
+//         if (prev.op.length !== 0) {
+//             prev.num2 =
+//         }
+//         prev.num = prev.num + item;
+//     } else {
+//         prev.op = item;
+//     }
+// }, {});
 // console.log(ARR_2);
+
 
